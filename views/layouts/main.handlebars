@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>{{title}}</title>    
+        <link  rel="stylesheet" href="/css/style.css">   
+    </head>
+    <body>
+            <header>              
+                <nav class = "navebar">
+                    <div class="logo">
+                         <a href="/"> <img src="/img/logo.svg" id="logo" width="50px" height="30px" ></a>
+                         <a href="/" class = "brand">Live Fit</a> 
+                    </div>
+                    
+                    <ul class="navbar_menu" style="width: 1000px;">                                               
+                        <li class ="nav"><a href="/">Home</a></li>
+                        <li class ="nav"><a href="product/mealsPackage">Meal Packages</a></li>   
+                        <li class ="nav"><a href="/login">Login</a></li>
+                        <li class ="nav"><a href="/customerRegistration">Registration</a></li>                                         
+                    </ul>
+                   
+                    <br>
+                </nav>   
+                
+            </header>
+
+            <main>  
+                <div class="hero-image">
+                    <img src="/img/hero.jpg">           
+                </div>     
+           
+                {{{body}}}
+            </main>
+            
+            <footer>
+                <ul class="bottom">
+                    <li><a href="product/mealsPackage">More meals</a></li>
+                    <li><a href="product/mealsPackage">Social Media</a></li>
+                    <li><a href="product/mealsPackage">About us</a></li>
+                </ul>       
+               
+            </footer>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+
+
+<h1 class="homeText">We have packages for you!</h1>
+<div class = "packageMeal-container">   
+    
+    {{#each data}}
+        <div class>
+            <img src="/img/{{this.imgPath}}" class="packageMealImg"><br>
+            <p class="text1">{{this.title}}</p>
+            <p class="text2">{{this.description}}</p>
+            <p class="text2">{{this.numberOfmeal}}</p>
+            <p class="text2" style="color: rgb(235, 29, 97);">{{this.price}}</p>
+            <br>
+        </div>
+    {{/each}}  
+</div>

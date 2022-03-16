@@ -1,0 +1,26 @@
+
+<section id="login">
+     <p class="custLogin"> Customer Login</p>
+    <div class="login-container">
+               
+          <p class="text1">Welcome Back!
+              <br>Check out our new deal!<br><br>
+          </p>     
+        <form action="/login" method="POST">  
+        
+            <label for="email" class="getinfo" >Email</label><br><br>
+            <input type="email" id="email-login" name="email"><br><br>
+
+            <label for="pwd" class="getinfo">Password</label><br><br>
+            <input type="password" name="password"><br><br><br><br>
+            <input type="submit" value="Sign In"  class="submitButton">
+             
+            <br><br>
+            {{#each errorMessages}}
+                <div class="errors">{{this}}</div><br>
+            {{/each}}
+
+        </form>
+    </div>
+
+</section>

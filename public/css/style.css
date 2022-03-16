@@ -1,0 +1,319 @@
+body
+{
+    color:black;
+    margin:0;
+    font-family: 'Trebuchet MS';
+}
+
+.navebar
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffdab9; 
+    padding: 5px 12px;
+
+}
+.navbar_menu
+{  
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    width:100%;  
+    top:0;
+    list-style-type: none;   
+    overflow: hidden;       
+    font-size: large;
+    padding:0;
+}
+
+.logo
+{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo a
+{
+    
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Trebuchet MS';     
+    font-weight: bold; 
+    color: black; 
+    
+
+}
+
+li
+{
+    float: left;
+    padding: 18px 10px;
+}
+
+li a
+{
+    color: black;
+    text-align: center;
+    padding: 30px 40px;
+    text-decoration: none;
+    font-weight: bolder;      
+}
+
+.navbar_menu li:hover
+{
+    background-color: orange;
+    border-radius: 5px;
+}
+.hero-image 
+{   
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;  
+    height: 50%;
+    width: 100%;      
+}
+
+.homeText
+{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    font-family: 'Trebuchet MS';
+}
+
+.container
+{
+    display: grid;      
+    grid-template-areas:       
+    "item1 item2 item3 item4";
+    justify-content: center;
+    gap: 80px;   
+    margin-bottom: 200px;
+    
+}
+
+.topMeal-container
+{
+    display: grid;      
+    grid-template-areas:       
+    "item5 item6 item7 item8";
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 200px;
+}
+
+
+
+
+.text1
+{
+    font-weight: 800;
+    font-size: larger;
+    font-family: 'Trebuchet MS';  
+}
+
+.text2
+{
+    font-weight: 500;
+    font-size: medium;
+    font-family:'Trebuchet MS';    
+}
+
+
+
+.homeImg
+{    
+    width: 200px;
+    height: 200px;
+}
+
+.bottom
+{
+    display:flex;
+    justify-content: space-around;
+    position: relative;
+    list-style-type: none; 
+    font-weight: bolder;   
+  
+}
+
+.top4meal
+{
+    width: 200px;
+    height: 200px;
+}
+
+.packageMeal-container
+{
+    display: grid;      
+    grid-template-areas:       
+    "item9 item10 item11 item12";
+    justify-content: center;
+    gap: 80px;
+    margin-top:100px;
+   
+}
+
+.packageMealImg
+{    
+    width: 200px;
+    height: 200px;
+}
+
+.CreateAccount
+{
+    font-family: 'Trebuchet MS';
+    font-weight: bolder;
+    font-size: larger;    
+    border-bottom: groove;
+}
+
+.regist-container
+{
+    padding:200px 100px;
+}
+.custLogin
+{        
+    font-family: 'Trebuchet MS';
+    font-weight: bolder;
+    font-size: larger;    
+    border-bottom: groove;   
+}
+
+.getinfo
+{
+    font-size: medium;
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
+}
+.login-container
+{
+    padding:200px 100px;
+}
+.submitButton
+{
+    background-color: tomato;
+    color: white;
+}
+
+#login
+{ 
+    display:inline-block;
+    margin-top: 200px;
+    margin-left:200px;
+    margin-bottom: 200px;
+    border-style: groove;
+}
+
+#regist
+{
+    display:inline-block;
+    margin-top: 200px;
+    margin-left:800px;
+    margin-bottom: 200px;
+    border-style: groove;
+}
+
+.errors
+{
+    color: red;
+}
+
+@media screen and (max-width: 1127px)
+{
+
+    .hero-image 
+    {   
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;  
+        width: auto;
+        height: auto;    
+    }
+
+    .navbar
+    {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 12px;
+    }
+    
+    .logo
+    {
+        position: absolute;
+        align-self: flex-start;
+        padding-top: 15px;
+    }
+
+    .navbar_menu
+    {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar_menu li
+    {
+        width: 100%;
+        text-align: center;
+    }
+
+    .bottom
+    {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding:0;
+
+    }
+
+    .container
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .topMeal-container
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .packageMeal-container
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #login  
+    { 
+        display: inline-block;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+        border-style: groove;
+    }
+
+    #regist
+    {
+        display: inline-block;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+        border-style: groove;
+    }
+
+
+    
+}
