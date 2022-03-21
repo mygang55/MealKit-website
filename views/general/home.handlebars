@@ -1,10 +1,7 @@
-
 <h1 class="homeText">No cooking, just eating!</h1>
 
-
-<div class="container">
-    
-    <div class="item">
+<div class="container">    
+    <div class = "item">
         <img src="/img/Pick_1.gif" alt="pick image" class="homeImg">
         <p class="text1">Pick</p> 
         <p class="text2">100+ menu</p>
@@ -24,26 +21,19 @@
         <p class="text1">Repeat</p> 
         <p class="text2">cancel anytime</p> 
     </div>
-
 </div>
 
 <h1 class="homeText">Our Top 4 Meals are here!</h1>
 <div class="topMeal-container">    
-
     {{#each data}}
-
-        <div class ="top4">
-                
+        <div class="top4">                
             <img src="/img/{{this.imgPath}}" class="top4meal"> <br>
             <p class="text1">{{this.title}}</p> 
             <p class="text2">{{this.description}}</p> 
             <p class="text2" style="color: rgb(235, 29, 97);">{{this.price}}</p>
             <br>
-
         </div>
-    {{/each}}
-    
-
+    {{/each}}   
 </div>
 
 

@@ -1,4 +1,5 @@
-const express = require('express')
+//jshint esversion:6
+const express = require('express');
 const router = express.Router();
 
 const Product = require("../models/product"); 
@@ -10,7 +11,7 @@ router.get("/",(req,res)=>
     res.render("general/home",{
         title: "Home",
         data: prod.getTopMeal()
-    })
+    });
 });
 
 //customer registration page route
@@ -18,14 +19,15 @@ router.get("/customerRegistration",(req,res)=>
 {
     res.render("general/registration",{
         title: "Registration"
-    })
+    });
 });
+
 //login page route
 router.get("/login",(req,res)=>
 {
     res.render("general/login",{
         title: "Sign In"
-    })
+    });
 });
 
 
@@ -33,8 +35,8 @@ router.get("/dashboard", (req,res)=>
 {
     res.render("general/dashboard",{
         title: "Dashboard"
-    })
-})
+    });
+});
 
 router.post("/customerRegistration",(req,res)=>
 {
@@ -88,7 +90,7 @@ router.post("/customerRegistration",(req,res)=>
         const msg = 
         {
           to: `${email}`,
-          from: `mygang55@naver.com`,
+          from: `mygang1120@gmail.com`,
           subject: 'Welcome to Live Fit Food!',         
           html: 
           `Please double check your information!<br>
@@ -105,7 +107,7 @@ router.post("/customerRegistration",(req,res)=>
         })                
         .catch(err=>{
             console.log(`Error ${err} occured`);
-        })   
+        });   
     }
 });
 
@@ -135,7 +137,7 @@ router.post("/login",(req,res)=>
     {
         res.render("general/home",{
             title:"Home"
-        })
+        });
     }
 });
 
