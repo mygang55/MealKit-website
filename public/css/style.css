@@ -118,8 +118,19 @@ li a
       
 }
 
-.hero-contents{
-    text-align: center;    
+.hero-contents
+{
+    text-align: center;        
+}
+
+.hero-btn{
+    padding: 10px;
+    width: 100%;
+    font-size: medium;
+    font-weight: bold;
+    background-color: rgb(47, 189, 47);
+    color: floralwhite;
+    font-family: 'Trebuchet MS';
 }
 
 .homeText
