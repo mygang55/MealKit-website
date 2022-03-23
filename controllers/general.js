@@ -32,9 +32,9 @@ router.get("/login",(req, res) =>
 
 
 router.get("/dashboard", (req, res) =>
-{
+{   
     res.render("general/dashboard",{
-        title: "Dashboard"
+        title: "Dashboard"      
     });
 });
 
@@ -122,7 +122,15 @@ router.post("/customerRegistration",(req, res) =>
         //Asynchoronous operation (who don't know how long this will take to execute)
         sgMail.send(msg)
         .then(()=>{
-            res.redirect("/dashboard"); //redirect to particular path 
+            res.render("general/dashboard", {
+                title: "Dashboard",
+                name:fname + " " + lname
+            });
+            
+            firstName=fname;
+            lastName=lastName;
+            emailAddress=email;
+
         })                
         .catch(err=>{
             console.log(`Error ${err} occured`);

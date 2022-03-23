@@ -1,10 +1,18 @@
 
 <div id = "welcome-container"> 
-    <h1>Welcome to Live Fit!</h1>
-    <h2>Thank you for joining us</h2>    
-    
-    <form method="get" action="/login">
-        <input type="submit" value="LogIn"  class="submitButton">        
+
+    <form class="form-dashboard" method="get" action="/login">
+       <div class="login-logo">
+            <img class="mb-4" src="/img/logo.svg" alt="" width="72" height="57">
+            <h1 class="h3 mb-3 fw-normal">Meal Kits</h1>
+        </div>
+        <div class="welcome-text">
+            <h2>Welcome to Meal Kits, {{name}}!</h2>
+            <p>Thank you for joining us</p>    
+        </div>
+        <div class="dashboard-btn">
+               <input type="submit" value="LogIn"  class="submitButton">   
+        </div>          
     </form> 
 
 </div>
