@@ -426,18 +426,24 @@ input{
     border:solid 1px gainsboro;
 }
 
+.added-items{
+   
+    text-align: center;
+    padding-left: 0;
+}
+
 .added-item
 {
+    
     list-style-type: none;
-    margin:0 20px;
+    margin-right:20px;
     padding: 20px;
     border: #c39e7f solid 2px;
 }
 
 .added-item img{
     width: 200px;
-    height: 200px;
-   
+    height: 200px;   
 }
 
 @media screen and (max-width: 768px)
@@ -567,6 +573,26 @@ input{
         margin: 0;
         
     }
+
+    .cart-container {
+        display: block;
+        justify-content: space-between;
+        margin: 50px 40px;
+    }
+
+    .cart-left{      
+       justify-content: center;        
+    }
+
+    .added-items{
+   
+        display: flex;
+        flex-direction: column;  
+        justify-content: center;   
+        text-align: center;
+    }
+   
+    
 
 
     
