@@ -1,24 +1,33 @@
-<section id="regist">
-    <p class="CreateAccount">Create Account</p>
-    
-    <div class="regist-container">
-        <p class="text1">Join Us and <br>
-        Enjoy your heathly meals!<br><br></p>
-        
-        <form action="/customerRegistration" method="POST">  
+<section id="regist">   
+    <div class="regist-container">        
+       
+        <form class="form-singup" action="/customerRegistration" method="POST">  
+            <div class="signup-logo">
+                <img class="mb-4" src="/img/logo.svg" alt="" width="72" height="57">
+                <h1 class="h3 mb-3 fw-normal">Meal Kits</h1>
+            </div>
+            <div class="signup-text">
+                <p class="createAccount">Create Account</p>  
+            </div>
+            <div class="form-input">
 
-            <label for="name" class="getinfo">First Name</label><br><br>
-            <input type ="text"  name="fname"><br><br>            
-            
-            <label for="name" class="getinfo">Last Name</label><br><br>
-            <input type ="text" name="lname"><br><br>
-        
-            <label for="email" class="getinfo">Email</label><br><br>
-            <input type="email" id="email" name="email"><br><br>
+                <label for="name" class="getinfo">First Name</label><br><br>
+                <input type ="text"  name="fname" placeholder="First name" autofocus required><br><br>            
 
-            <label for="pwd" class="getinfo">Password</label><br><br>
-            <input type="password" name="password"><br><br><br><br>
-            <input type="submit" value="Sign Up" class="submitButton">
+                <label for="name" class="getinfo">Last Name</label><br><br>
+                <input type ="text" name="lname" placeholder="Last name" required><br><br>
+
+                <label for="email" class="getinfo">Email</label><br><br>
+                <input type="email" id="email" name="email" placeholder="name@example.com" required><br><br>
+
+                <label for="pwd" class="getinfo">Password</label><br><br>
+                <input type="password" name="password" placeholder="Passward" required<br><br><br><br>
+               
+
+            </div>
+            <div class="login-submit">     
+                <input type="submit" value="Sign Up" class="signup-btn">
+            </div>
 
             <br><br>
             {{#each errorMessages}}
@@ -26,6 +35,9 @@
             {{/each}}
 
         </form>
+
     </div>
        
 </section>
+
+
