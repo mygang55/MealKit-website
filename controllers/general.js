@@ -6,7 +6,7 @@ const Product = require("../models/product");
 let prod = new Product();
 
 //home page route
-router.get("/",(req,res)=>
+router.get("/",(req, res) =>
 {
     res.render("general/home",{
         title: "Home",
@@ -15,7 +15,7 @@ router.get("/",(req,res)=>
 });
 
 //customer registration page route
-router.get("/customerRegistration",(req,res)=>
+router.get("/customerRegistration",(req, res) =>
 {
     res.render("general/registration",{
         title: "Registration"
@@ -23,7 +23,7 @@ router.get("/customerRegistration",(req,res)=>
 });
 
 //login page route
-router.get("/login",(req,res)=>
+router.get("/login",(req, res) =>
 {
     res.render("general/login",{
         title: "Sign In"
@@ -31,14 +31,33 @@ router.get("/login",(req,res)=>
 });
 
 
-router.get("/dashboard", (req,res)=>
+router.get("/dashboard", (req, res) =>
 {
     res.render("general/dashboard",{
         title: "Dashboard"
     });
 });
 
-router.post("/customerRegistration",(req,res)=>
+
+router.get("/aboutUs", (req, res) =>
+{
+    res.render("general/aboutUs", {
+        title: "About Us"
+    });    
+
+});
+
+router.get("/cart", (req, res) =>
+{
+    res.render("general/cart", {
+        title: "Cart"
+    });    
+
+});
+
+
+
+router.post("/customerRegistration",(req, res) =>
 {
     const errors=[];
 
@@ -111,7 +130,7 @@ router.post("/customerRegistration",(req,res)=>
     }
 });
 
-router.post("/login",(req,res)=>
+router.post("/login",(req, res) =>
 {
     const errors=[];
    

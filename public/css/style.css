@@ -5,47 +5,75 @@ body
     font-family: 'Trebuchet MS';
 }
 
-.navebar
+.navbar
+{
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: row;     */
+    /* align-items: center; */
+    background-color: #ffdab9; 
+    padding: 0px 12px;
+}
+
+.nav-left
 {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
-    background-color: #ffdab9; 
-    padding: 5px 12px;
-
+    justify-content: left;
 }
-.navbar_menu
+
+.nav-right
+{
+   display: flex;
+   flex-direction: row;
+   justify-content: right;     
+}
+
+
+.navbar-menu 
 {  
     display:flex;
     flex-direction: row;
-    justify-content: center;
-    width:100%;  
+    justify-content: left;
     top:0;
     list-style-type: none;   
     overflow: hidden;       
     font-size: large;
     padding:0;
+    margin:10px 0;
+}
+
+.navbar-logIn
+{  
+    display:flex;
+    flex-direction: row;
+    justify-content: right;   
+    top:0;
+    list-style-type: none;   
+    overflow: hidden;       
+    font-size: large;
+    padding:0;
+    margin:10px 0;
 }
 
 .logo
-{
-    padding-left: 20px;
+{  
+    margin: 0 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;  
 }
+
 .logo a
-{
-    
+{    
     text-decoration: none;
-    font-size: 20px;
+    font-size: 17px;
     font-family: 'Trebuchet MS';     
     font-weight: bold; 
     color: black; 
-    
-
 }
+
 
 li
 {
@@ -53,27 +81,45 @@ li
     padding: 18px 10px;
 }
 
+
 li a
 {
     color: black;
     text-align: center;
-    padding: 30px 40px;
+    padding: 30px 10px;
     text-decoration: none;
     font-weight: bolder;      
 }
 
-.navbar_menu li:hover
+.navbar-menu li:hover
 {
-    background-color: orange;
+    background-color: #f7cfae;
     border-radius: 5px;
 }
-.hero-image 
+
+.navbar-logIn li:hover
+{
+    background-color: #f7cfae;
+    border-radius: 5px;
+}
+
+.hero-image
 {   
+    background-image: url("../img/banner.png");    
+    height: 50%;
+    width: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 200px 0;
     display: flex;
     justify-content: center;
-    margin-top: 50px;  
-    height: 50%;
-    width: 100%;      
+    margin-top: 0px;  
+      
+}
+
+.hero-contents{
+    text-align: center;    
 }
 
 .homeText
@@ -91,8 +137,7 @@ li a
     "item1 item2 item3 item4";
     justify-content: center;
     gap: 80px;   
-    margin-bottom: 200px;
-    
+    margin-bottom: 200px;    
 }
 
 .topMeal-container
@@ -105,6 +150,24 @@ li a
     margin-bottom: 200px;
 }
 
+.aboutUs-contents
+{
+    margin: 30px auto;
+    text-align: center;    
+    max-width: 70%;
+    line-height: 2em;     
+
+}
+
+.photos
+{
+    text-align: center;    
+}
+
+.photos img
+{
+    margin:80px 30px 30px 30px;
+}
 
 
 
@@ -136,8 +199,7 @@ li a
     justify-content: space-around;
     position: relative;
     list-style-type: none; 
-    font-weight: bolder;   
-  
+    font-weight: bolder;     
 }
 
 .top4meal
@@ -175,6 +237,7 @@ li a
 {
     padding:200px 100px;
 }
+
 .custLogin
 {        
     font-family: 'Trebuchet MS';
@@ -189,10 +252,12 @@ li a
     font-family: 'Trebuchet MS';
     font-weight: bold;
 }
+
 .login-container
 {
     padding:200px 100px;
 }
+
 .submitButton
 {
     background-color: tomato;
@@ -222,24 +287,83 @@ li a
     color: red;
 }
 
-@media screen and (max-width: 1127px)
+.cart-container
+{   
+    display: flex;
+    justify-content: space-between;
+    margin:50px 40px;
+}
+
+.cart-left
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.cart-right
+{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid gray;
+    border-radius: 4px; 
+    padding:10px 30px; 
+  
+}
+
+.checkout-form button
+{
+    margin-top: 20px;
+    padding:10px 15px;
+    background-color: #ffc809;
+    border-radius: 4px;
+    border:solid 1px gainsboro;
+}
+
+.added-item
+{
+    list-style-type: none;
+    margin:0 20px;
+    padding: 20px;
+    border: #c39e7f solid 2px;
+}
+
+.added-item img{
+    width: 200px;
+    height: 200px;
+   
+}
+
+@media screen and (max-width: 769px)
 {
 
     .hero-image 
     {   
         display: flex;
-        justify-content: center;
-        margin-top: 50px;  
-        width: auto;
-        height: auto;    
+        justify-content: center;        
+       
     }
 
     .navbar
     {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: column;       
         padding: 8px 12px;
+        
+        
     }
+    
+    .nav-left
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;       
+    }
+
+    .nav-right
+    {
+       display: flex;
+       flex-direction: row;        
+    }
+
     
     .logo
     {
@@ -248,18 +372,41 @@ li a
         padding-top: 15px;
     }
 
-    .navbar_menu
+    .navbar-menu
     {
         flex-direction: column;
         align-items: center;
         width: 100%;
     }
 
-    .navbar_menu li
+    
+    .navbar-logIn
+    {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+
+    li
     {
         width: 100%;
         text-align: center;
     }
+
+    
+    .navbar-menu li:hover
+    {
+        background-color: #f7cfae;
+        border-radius: 5px;
+    }
+
+    .navbar-logIn li:hover
+    {
+        background-color: #f7cfae;
+        border-radius: 5px;
+    }
+
 
     .bottom
     {

@@ -85,7 +85,7 @@ class Product
             {
                 pack.push(element);
             }        
-        })
+        });
 
         return pack;
     }
